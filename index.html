@@ -14,10 +14,27 @@
 
 </head>
 <body>
-    <div class="hero-test">Hangry</div>
-    <div class="h2-test">Hangry</div>
-    <div class="h3-test">Hangry</div>
-    <div class="p-test">Hangry</div>
-    <i class="fas fa-pizza-slice"></i>
+    <header class="navigation">
+        <div class="logo">
+            <div class="logo-text">Hangry</div>
+            <i class="fas fa-pizza-slice logo-img"></i>
+        </div>
+        <div>
+            <i class="fas fa-search search-icon"></i>
+<!--            <input class="search-box" type="search" autocomplete="off" id="search-box-input" placeholder="What do you feel like eating today?..."/>-->
+            <search-box class="search-box" title="testing"></search-box>
+        </div>
+        <button class="primary-btn">
+            Get started
+        </button>
+    </header>
+    <section id="container">
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/algoliasearch@3/dist/algoliasearchLite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/algoliasearch-helper@3.4.2/dist/algoliasearch.helper.min.js"></script>
+    <script src="components/search-box.js"></script>
+    <script src="js/search.js"></script>
 </body>
 </html>

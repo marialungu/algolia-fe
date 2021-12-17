@@ -1,4 +1,14 @@
-.hero-test {
+body {
+  margin: 40px 100px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.logo-text {
   font-size: 38px;
   line-height: 50px;
   font-weight: 800;
@@ -6,25 +16,55 @@
   color: #f8d16c;
 }
 
-.h2-test {
-  font-size: 20px;
-  line-height: 30px;
-  font-weight: 600;
-  font-family: "Raleway", sans-serif;
+.logo {
+  display: flex;
+  flex-direction: row;
 }
 
-.h3-test {
+.logo-img {
+  color: #f8d16c;
+  font-size: 34px;
+}
+
+.primary-btn {
+  border-radius: 18px;
+  color: #182e47;
+  background-color: #f8d16c;
+  border: none;
+  height: 54px;
+  width: 140px;
   font-size: 16px;
   line-height: 26px;
   font-weight: 600;
   font-family: "Raleway", sans-serif;
 }
 
-.p-test {
-  font-size: 14px;
-  line-height: 20px;
+.search-icon {
+  color: #f8d16c;
+  font-size: 20px;
+  padding: 17px;
+  position: absolute;
+}
+
+.search-box-container {
+  font-size: 16px;
+  line-height: 26px;
   font-weight: 600;
   font-family: "Raleway", sans-serif;
+  height: 54px;
+  padding: 0 25px 0 45px;
+  width: 700px;
+  border: none;
+  border-radius: 18px;
+  background-color: #f7f9fa;
+  color: #42576e;
+}
+.search-box-container:focus-visible {
+  outline: none;
+}
+
+#container em {
+  background: yellow;
 }
 
 /*# sourceMappingURL=main.css.map */

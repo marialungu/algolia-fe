@@ -1,16 +1,60 @@
 @import "css/colors";
 @import "css/typography";
+@import "css/components";
 
-.hero-test {
+
+body {
+  margin: 40px 100px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.logo-text {
   @include hero-styled
 }
 
-.h2-test {
-  @include h2-styled
+.logo {
+  display: flex;
+  flex-direction: row;
 }
-.h3-test {
-  @include h3-styled
+
+.logo-img {
+  color: $primary;
+  font-size: 34px;
 }
-.p-test {
-  @include p-styled
+
+.primary-btn {
+  @include primary-button;
+  @include button-large;
+  @include h3-styled;
+}
+
+.search-icon {
+  color: $primary;
+  font-size: 20px;
+  padding: 17px;
+  position: absolute;
+}
+
+.search-box-container {
+  @include h3-styled;
+  height: 54px;
+  padding: 0 25px 0 45px;
+  width: 700px;
+  border: none;
+  border-radius: 18px;
+  background-color: $fieldBackground;
+  color: $inkSecondaryContrast;
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+#container em {
+  background: yellow;
 }
