@@ -1,0 +1,30 @@
+.hero-test {
+  font-size: 38px;
+  line-height: 50px;
+  font-weight: 800;
+  font-family: "Montserrat", sans-serif;
+  color: #f8d16c;
+}
+
+.h2-test {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 600;
+  font-family: "Raleway", sans-serif;
+}
+
+.h3-test {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 600;
+  font-family: "Raleway", sans-serif;
+}
+
+.p-test {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  font-family: "Raleway", sans-serif;
+}
+
+/*# sourceMappingURL=main.css.map */

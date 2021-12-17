@@ -1,0 +1,16 @@
+@import "css/colors";
+@import "css/typography";
+
+.hero-test {
+  @include hero-styled
+}
+
+.h2-test {
+  @include h2-styled
+}
+.h3-test {
+  @include h3-styled
+}
+.p-test {
+  @include p-styled
+}

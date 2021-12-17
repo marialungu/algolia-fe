@@ -1,0 +1,44 @@
+@import "colors";
+
+@mixin hero-styled {
+  font-size: 38px;
+  line-height: 50px;
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  color: $primary
+}
+
+@mixin h1-styled {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@mixin h2-styled {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 600;
+  font-family: 'Raleway', sans-serif;
+}
+
+@mixin h3-styled {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 600;
+  font-family: 'Raleway', sans-serif;
+}
+
+@mixin p-styled {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  font-family: 'Raleway', sans-serif;
+}
+
+@mixin p-styled-thin {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+  font-family: 'Raleway', sans-serif;
+}
