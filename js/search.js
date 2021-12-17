@@ -22,9 +22,24 @@ restaurantCard.innerHTML = `
     </div>
 `;
 
+const starSolid = document.createElement('template')
+starSolid.innerHTML = `<i class="fas fa-star star"></i>`
+
+const starOutline = document.createElement('template')
+starOutline.innerHTML = `<i class="far fa-star star"></i>`
+
+const searchBar = document.getElementById('search-box-input')
+
 helper.on('result', function(content) {
     renderHits(content);
 });
+
+const generateStarRating = (starType, parentNode, conditionCeil) => {
+    for (let star = 0; star < conditionCeil; star++) {
+        const starClone = starType.content.cloneNode(true);
+        parentNode.appendChild(starClone)
+    }
+}
 
 const renderHits = (content) => {
     const elementsList = document.createElement('div')
@@ -39,27 +54,14 @@ const renderHits = (content) => {
             const rating = restaurantClone.querySelector('#rating');
             const ratingStars = restaurantClone.querySelector('#rating-stars');
 
-            const starSolid = document.createElement('template')
-            starSolid.innerHTML = `<i class="fas fa-star star"></i>`
-
-            const starOutline = document.createElement('template')
-            starOutline.innerHTML = `<i class="far fa-star star"></i>`
-
-            for (let star = 0; star < hit.rounded_stars_count; star++) {
-                const starClone = starSolid.content.cloneNode(true);
-                ratingStars.appendChild(starClone)
-            }
-
-            for (let star = 0; star < 5 - hit.rounded_stars_count; star++) {
-                const starClone = starOutline.content.cloneNode(true);
-                ratingStars.appendChild(starClone)
-            }
-
+            generateStarRating(starSolid, ratingStars, hit.rounded_stars_count)
+            generateStarRating(starOutline, ratingStars, 5 - hit.rounded_stars_count)
             name.textContent = hit.name
             price.textContent = hit.price_range
             foodType.textContent = hit.food_type
             location.textContent = hit.neighborhood
             rating.textContent = hit.stars_count
+
             elementsList.appendChild(restaurantClone)
         })
         const elementsContainer = document.querySelector('#container');
@@ -69,10 +71,8 @@ const renderHits = (content) => {
     allElements(content)
 }
 
-const searchBar = document.getElementById('search-box-input')
 searchBar.addEventListener('keyup', () => {
-    helper.setQuery(searchBar.value)
-        .search();
+    helper.setQuery(searchBar.value).search();
 });
 
 helper.search();
